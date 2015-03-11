@@ -38,6 +38,11 @@
   <%= f.label :tag_list %>
   <%= f.text_field :tag_list %>
 
+  <div class="field">
+    <%= f.label "Is it featured?" %> <br />
+    <%= f.check_box :featured %> <br />
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
