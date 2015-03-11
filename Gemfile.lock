@@ -49,6 +49,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.4.0)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     hike (1.2.3)
     httpclient (2.6.0.1)
     i18n (0.7.0)
@@ -140,6 +142,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.2.0.2)
   coffee-rails (~> 4.0.0)
   devise
+  friendly_id
   impressionist
   jbuilder (~> 2.0)
   jquery-rails

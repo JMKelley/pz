@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150311200351) do
+ActiveRecord::Schema.define(version: 20150311200910) do
 
   create_table "impressions", force: true do |t|
     t.string   "impressionable_type"
@@ -47,8 +47,10 @@ ActiveRecord::Schema.define(version: 20150311200351) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "slug"
   end
 
+  add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "users", force: true do |t|

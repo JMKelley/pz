@@ -21,6 +21,8 @@ gem 'acts_as_votable'
 
 gem 'impressionist'
 
+gem 'friendly_id'
+
 gem 'bootstrap-sass', '~> 3.2.0.2'
 
 # Use jquery as the JavaScript library
