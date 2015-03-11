@@ -23,6 +23,8 @@ gem 'impressionist'
 
 gem 'friendly_id'
 
+gem 'acts-as-taggable-on'
+
 gem 'bootstrap-sass', '~> 3.2.0.2'
 
 # Use jquery as the JavaScript library

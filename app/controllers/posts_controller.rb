@@ -8,7 +8,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    if params[:tag]
+    @posts = Post.tagged_with(params[:tag])
+    else
     @posts = Post.all
+    end
   end
 
   # GET /posts/1
@@ -65,6 +69,7 @@ class PostsController < ApplicationController
     end
   end
 
+
   private
 
     # Use callbacks to share common setup or constraints between actions.
@@ -79,6 +84,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :url, :image, :affiliate, :duration)
+      params.require(:post).permit(:title, :url, :image, :affiliate, :duration, :tag_list)
     end
 end
