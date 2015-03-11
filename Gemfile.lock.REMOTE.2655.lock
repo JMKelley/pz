@@ -128,11 +128,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
-  bootstrap-sass (~> 3.2.0.2)
-=======
   bootstrap-sass
->>>>>>> styling
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 2.0)
