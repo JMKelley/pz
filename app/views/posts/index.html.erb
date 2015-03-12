@@ -1,6 +1,6 @@
 <h1>Listing posts</h1>
 
-
+<%= @posts.tag_counts_on(:tags) %>
 
 <table>
   <thead>
@@ -14,9 +14,7 @@
     </tr>
   </thead>
 
-  <% @featured.limit(1).each do |post| %>
-    <%= post.last.title %>
-  <% end %>
+    <%= @featured.title %>
 
   <tbody>
     <% @posts.each do |post| %>

@@ -14,7 +14,7 @@ class PostsController < ApplicationController
       @posts = Post.all
     end
 
-    @featured = Post.featured.order("created_at desc").limit(2)
+    @featured = Post.featured.order("created_at").last
   end
 
   # GET /posts/1
