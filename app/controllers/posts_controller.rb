@@ -8,13 +8,17 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
     else
-      @posts = Post.all
+      @posts = Post.order('created_at DESC').all
     end
 
+    @exclude_post = @posts.where(featured: true).first
+
     @featured = Post.featured.order("created_at").last
+
   end
 
   # GET /posts/1
