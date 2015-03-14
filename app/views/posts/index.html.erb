@@ -13,7 +13,10 @@
     </tr>
   </thead>
 
-    <%= @featured.title %>
+<% if @featured %>
+  <%= @featured.title %>
+<% else %>
+<% end %>
 
   <tbody>
     <% @posts.each do |post| %>

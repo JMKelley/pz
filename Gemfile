@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'carrierwave'
 
+gem 'pg'
+
 gem 'devise'
 
 gem 'acts_as_votable'
