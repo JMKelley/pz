@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150311230422) do
+ActiveRecord::Schema.define(version: 20150314215546) do
 
   create_table "impressions", force: true do |t|
     t.string   "impressionable_type"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150311230422) do
     t.string   "slug"
     t.string   "video"
     t.boolean  "featured",   default: false
+    t.string   "category"
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true

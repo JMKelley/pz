@@ -28,6 +28,8 @@
     <%= f.text_field :affiliate %>
   </div>
 
+  <%= f.select :category, [ 'Box', 'Cover', 'Poster' ], :prompt => 'Select One' %>
+
   <%= f.file_field :video %>
 
   <div class="field">

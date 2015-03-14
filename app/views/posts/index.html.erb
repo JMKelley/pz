@@ -1,6 +1,5 @@
 <h1>Listing posts</h1>
 
-<%= @posts.tag_counts_on(:tags) %>
 
 <table>
   <thead>
@@ -21,6 +20,7 @@
       <% next if @exclude_post.id == post.id %>
       <tr>
         <td><%= post.title %></td>
+        <td><%= post.category %></td>
         <td><%= post.url %></td>
         <td><%= post.image %></td>
         <td><%= post.affiliate %></td>

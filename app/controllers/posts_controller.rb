@@ -1,8 +1,6 @@
 class PostsController < ApplicationController
 
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authorized_user, only: [:edit, :update, :destroy]
-  before_filter :authenticate_user!, :except => [:index, :show]
   impressionist :actions=>[:show,:index]
 
   # GET /posts
@@ -90,6 +88,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :url, :image, :affiliate, :duration, :tag_list, :video, :featured)
+      params.require(:post).permit(:title, :url, :image, :affiliate, :duration, :tag_list, :video, :featured, :category)
     end
 end
