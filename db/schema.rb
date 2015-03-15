@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150314220807) do
+ActiveRecord::Schema.define(version: 20150315163025) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,8 +52,11 @@ ActiveRecord::Schema.define(version: 20150314220807) do
     t.integer  "user_id"
     t.string   "slug"
     t.string   "video"
-    t.boolean  "featured",   default: false
+    t.boolean  "featured",       default: false
     t.string   "category"
+    t.json     "featuredimages"
+    t.string   "featuredone"
+    t.string   "featuredtwo"
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true, using: :btree

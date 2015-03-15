@@ -8,6 +8,9 @@ class Post < ActiveRecord::Base
 	friendly_id :title, use: :slugged
 
 	mount_uploader :video, VideoUploader
+	mount_uploader :image, ImageUploader
+	mount_uploader :featuredone, FeaturedoneUploader
+	mount_uploader :featuredtwo, FeaturedtwoUploader
 
 	scope :featured, -> { where(:featured => true) }
 

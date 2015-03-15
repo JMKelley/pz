@@ -21,16 +21,36 @@
   </div>
   <div class="field">
     <%= f.label :image %><br>
-    <%= f.text_field :image %>
+    <%= f.file_field :image %>
   </div>
   <div class="field">
     <%= f.label :affiliate %><br>
     <%= f.text_field :affiliate %>
   </div>
 
-  <%= f.select :category, [ 'Box', 'Cover', 'Poster' ], :prompt => 'Select One' %>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.select :category, [ 'Box', 'Cover', 'Poster' ], :prompt => 'Select One' %>
+  </div>
 
-  <%= f.file_field :video %>
+  <div class="field">
+    <%= f.label :video %><br>
+    <%= f.file_field :video %>
+  </div>
+
+  <div class="field">
+    <%= f.label :featuredone %><br>
+    <%= f.file_field :featuredone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :featuredtwo %><br>
+    <%= f.file_field :featuredtwo %>
+  </div>
+
+
+
+  
 
   <div class="field">
     <%= f.label :duration %><br>
