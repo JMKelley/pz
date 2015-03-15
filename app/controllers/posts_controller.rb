@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_filter :authorize_admin, only: :new
+  
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   impressionist :actions=>[:show,:index]
 
