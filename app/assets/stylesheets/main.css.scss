@@ -1,7 +1,49 @@
  @import "bootstrap";
 
+html {
+	-webkit-font-smoothing: antialiased;
+}
 
- body
- {
- 	background:#000;
- }
+
+body
+{
+	background:#1E1F23;
+	padding-top:72px;
+}
+
+.navbar-default
+{
+	background-color: #121317;
+	border:none;
+	box-shadow: none;
+}
+
+.navbar-nav > li > a {
+  padding-top: 19px;
+  padding-bottom: 19px;
+  font-family: 'Roboto Condensed', sans-serif;
+	font-size: 13px;
+	text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.navbar-default .navbar-nav > li > a
+{
+	color:#a4a4a4;
+}
+
+.navbar-default .navbar-nav > li > a:hover
+{
+	color:#FFF;
+	background:#777;
+}
+
+
+.navbar-brand {
+  float: left;
+  padding: 18px 18px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 58px;
+}
