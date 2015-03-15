@@ -7,13 +7,13 @@ html {
 
 body
 {
-	background:#24262C;
+	background:#0B0B0B;
 	padding-top:72px;
 }
 
 .navbar-default
 {
-	background-color: #121317;
+	background-color: rgba(15,16,18,0.8);
 	border:none;
 	box-shadow: none;
 }
@@ -31,7 +31,6 @@ body
 	font-size: 13px;
 	text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: 0.2px;
   -webkit-transition: all .1s ease-in;
   -moz-transition: all .1s ease-in;
   -o-transition: all .1s ease-in;
@@ -59,3 +58,34 @@ body
   line-height: 20px;
   height: 58px;
 }
+
+
+
+/* FEATURED IMAGE STYLES */
+
+.featured-wrapper
+{
+  margin-top:-72px;
+  position: relative;
+  padding:150px 0px 78px;
+}
+
+.featured-image-container
+{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity:0.7;
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  z-index: 1;
+}
+
+.featured-content
+{
+  z-index:2;
+}
+
+/* END */
