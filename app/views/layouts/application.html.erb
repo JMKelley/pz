@@ -9,8 +9,11 @@
   <link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
   <script src="//vjs.zencdn.net/4.12/video.js"></script>
 
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+  <script src="//cdn.jsdelivr.net/blazy/1.3.1/blazy.min.js"></script>
+  <script src="//use.typekit.net/utw1mof.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
 
   
   
@@ -18,7 +21,7 @@
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top">
- <div class="container">
+ <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -27,19 +30,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><%= image_tag 'logo121.png' %></a>
+      <a class="navbar-brand" href="#"><%= image_tag 'logo.png' %></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#"><i class="fa fa-bars icon"></i>Browse</a></li>
-        <li><a href="#"><i class="fa fa-video-camera icon"></i>Trailers</a></li>
-        <li><a href="#"><i class="fa fa-heart icon"></i>Popular</a></li>
+        <li><a href="#"><i class="fa fa-bars icon"></i>Feed <span class="caret"></span></a></li>
+        <li><a href="#"><i class="fa fa-video-camera icon"></i>Cams</a></li>
+        <li><a href="#"><i class="fa fa-heart icon"></i>Liked</a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="#" class="small-padding"><div class="tag">We're Hiring!</div></a></li>
       </ul>
 
     </div><!-- /.navbar-collapse -->
@@ -55,6 +58,13 @@
 <%= yield %>
 
 
+
+<script>
+        ;(function() {
+            // Initialize
+            var bLazy = new Blazy();
+        })();
+</script>
 
 </body>
 </html>

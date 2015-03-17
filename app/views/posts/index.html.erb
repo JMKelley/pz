@@ -1,67 +1,21 @@
-<% if @featured %>
-  <div class="container-fluid featured-wrapper">
-    
+<div class="container-fluid no-padding">
+  <% @posts.each do |post| %>
+    <div class="widget" >
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5 featured-content" >
-         
-          <p><%= @featured.category %></p>
-          <h1><%= @featured.title %></h1>
-          <p>This is just quite a bit paragraph on what could be in the description of a trailer and what it could show etc blah blah.</p>
-
-        </div>
+      <div class="image b-lazy" data-src="<%= post.image %>">
       </div>
+
+      <div class="caption">
+        <h4><%= post.title %></h4>
+        <div class="tag <%= post.category %>"><%= post.category %></div>
+
+      </div>
+
     </div>
-
-    <div class="featured-image-container" style="background-image:url(<%= @featured.image %>)">
-    </div>
-
-  </div>
-  <% else %>
-<% end %>
-
-<h1>Listing posts</h1>
+  <% end %>
+</div>
 
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Url</th>
-      <th>Image</th>
-      <th>Affiliate</th>
-      <th>Duration</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-<% if @featured %>
-    <%= @featured.title %>
-    <img src="<%= @featured.featuredone %>"/>
-  <% else %>
-<% end %>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <% next if @exclude_post.id == post.id %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.category %></td>
-        <td><%= post.url %></td>
-        <td><%= post.image %></td>
-        <td><%= post.affiliate %></td>
-        <td><%= post.duration %></td>
-        <td><%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 
 <%= link_to 'New Post', new_post_path %>
 <% if user_signed_in? %>
