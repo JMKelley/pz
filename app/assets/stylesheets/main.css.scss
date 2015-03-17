@@ -104,7 +104,7 @@ body
 
 .nav .tag
 {
-  background-color: #28C567;
+  background-color: #FFA223;
 }
 
 .tag
@@ -125,28 +125,16 @@ body
 
 /* FEATURED IMAGE STYLES */
 
-.featured-wrapper
+.video-wrapper
 {
-  margin-top:-72px;
   position: relative;
-  padding:130px 0px 118px;
 }
 
-.featured-wrapper h1
-{
-  font-family: "pragmatica-web";
-  font-size: 48px;
-  color: #FFFFFF;
-  line-height: 60px;
-  font-weight: bold;
-  float:left;
-}
-
-.featured-image-container
+.video-image-container
 {
   background-repeat: no-repeat;
   background-size: 100%;
-  opacity:0.7;
+  opacity:0.14;
   position:absolute;
   left:0;
   top:0;
@@ -238,4 +226,26 @@ body
   font-weight: bold;
   font-size:16px;
   color:#fff;
+  line-height: 22px;
+  margin-bottom:7px;
+}
+
+.widget .caption p
+{
+  margin-top:0px;
+  margin-bottom: 14px;
+  color:#fff;
+  opacity:0.4;
+}
+
+/* INPOST PAGE STYLES */
+
+.video-player
+{
+  margin:30px auto;
+  z-index:2;
+  display: block;
+  height:400px;
+  width:70%;
+
 }

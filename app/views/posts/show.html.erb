@@ -1,4 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid video-wrapper">
+  <div class="video-image-container" style="background-image:url(<%= @post.image %>)">
+  </div>
+    <div class="container">
+      <video id="<%= @post.title %>" class="video-js vjs-default-skin video-player"
+        controls preload="auto" width="854px" height="510px"
+        poster="<%= @post.image %>">
+
+       <source src="<%= @post.video_url %>" type='video/mp4' />
+      </video>
+    </div>
+</div>
 
 <p> <%= @post.impressionist_count %></p>
 
@@ -39,12 +50,7 @@
   <%= @post.duration %>
 </p>
 
-<video id="example_video_1" class="video-js vjs-default-skin"
-  controls preload="auto" width="640" height="264"
-  poster="http://video-js.zencoder.com/oceans-clip.png">
 
- <source src="<%= @post.video_url %>" type='video/mp4' />
-</video>
 
 <% if @post.user == current_user %>
   <td><%= link_to 'Edit', edit_post_path(@post) %></td>
