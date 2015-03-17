@@ -56,6 +56,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.4.0)
+    fancybox2-rails (0.2.8)
+      railties (>= 3.1.0, < 5.0)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     hike (1.2.3)
@@ -152,6 +154,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
+  fancybox2-rails (~> 0.2.8)
   friendly_id
   impressionist
   jbuilder (~> 2.0)

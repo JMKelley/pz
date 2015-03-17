@@ -18,6 +18,8 @@ gem 'carrierwave'
 
 gem 'pg'
 
+gem 'fancybox2-rails', '~> 0.2.8'
+
 gem 'devise'
 
 gem 'acts_as_votable'

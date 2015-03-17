@@ -1,7 +1,7 @@
 <div class="container-fluid no-padding">
   <% @posts.each do |post| %>
     <div class="widget" >
-
+    <%= link_to post do %>
       <div class="image b-lazy" data-src="<%= post.image %>">
       </div>
 
@@ -10,7 +10,7 @@
         <div class="tag <%= post.category %>"><%= post.category %></div>
 
       </div>
-
+    <% end %>
     </div>
   <% end %>
 </div>
@@ -34,3 +34,4 @@
     <li><%= link_to 'Sign in', new_user_session_path %></li>
   </ul>
 <% end %>
+
