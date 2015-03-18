@@ -11,6 +11,18 @@ body
 	padding-top:58px;
 }
 
+.b-lazy {
+    -webkit-transition: opacity 500ms ease-in-out;
+       -moz-transition: opacity 500ms ease-in-out;
+         -o-transition: opacity 500ms ease-in-out;
+            transition: opacity 500ms ease-in-out;
+             max-width: 100%;
+               opacity: 0;
+}
+.b-lazy.b-loaded {
+               opacity: 1;
+}
+
 .navbar-default
 {
 	background-color: #181818;
@@ -192,7 +204,7 @@ body
 
 .widget:hover .image
 {
-  opacity:0.4;
+  opacity:0.3;
 }
 
 .widget:hover .caption
@@ -216,10 +228,23 @@ body
   transition: all .2s ease-in-out;
 }
 
+/* TAG COLOURS */
+
 .widget .caption .Lesbian
 {
   background-color: #F42265;
 }
+
+.widget .caption .Asian
+{
+  background-color: #ff2a68;
+}
+
+.widget .caption .Anal
+{
+  background-color: #ff5e3a;
+}
+
 
 .widget .caption h4
 {
@@ -227,7 +252,7 @@ body
   font-size:16px;
   color:#fff;
   line-height: 22px;
-  margin-bottom:7px;
+  margin-bottom: 12px;
 }
 
 .widget .caption p

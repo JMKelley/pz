@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'carrierwave'
 
+gem "mediaelement_rails"
+
 gem 'pg'
 
 gem 'fancybox2-rails', '~> 0.2.8'
