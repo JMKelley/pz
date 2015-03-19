@@ -1,59 +1,47 @@
 <div class="container-fluid video-wrapper">
-  <div class="video-image-container" style="background-image:url(<%= @post.image %>)">
-  </div>
+
     <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+            <div id="myElement">Loading the player...</div>
+        </div>
 
-      <div id="myElement">Loading the player...</div>
+        <div class="col-md-4">
+        </div>
 
-      <script type="text/javascript">
-          jwplayer("myElement").setup({
-              file: "<%= @post.video %>",
-              image: "<%= @post.image %>"
-          });
-      </script>
+      </div>
+
+
+
+        <script type="text/javascript">
+            jwplayer("myElement").setup({
+                file: "<%= @post.video %>",
+                image: "<%= @post.image %>",
+                stretching: "fill",
+                width: "100%",
+                aspectratio: "16:9"
+            });
+        </script>
 
       </video>
     </div>
 </div>
 
-<p> <%= @post.impressionist_count %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1><%= @post.title %></h1>
+      <p><%= @post.impressionist_count %> Views</p>
+      <p>By <a href="<%= @post.url %>"><%= @post.affiliate %></a> </p>
+    </div>
+  </div>
+</div>
+
+<p> </p>
 
 
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @post.url %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @post.image %>
-</p>
-
-<p>
-  <strong>First Feature:</strong>
-  <%= @post.featuredone %>
-</p>
-
-<p>
-  <strong>2nd Feature:</strong>
-  <%= @post.featuredtwo %>
-</p>
-
-<p>
-  <strong>Affiliate:</strong>
-  <%= @post.affiliate %>
-</p>
-
-<p>
-  <strong>Duration:</strong>
-  <%= @post.duration %>
-</p>
 
 
 
