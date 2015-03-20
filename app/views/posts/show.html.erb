@@ -23,9 +23,10 @@
                   </div>
                   <div class="col-md-4 text-right">
                     <a class="btn"><i class="fa fa-heart icon"></i></a>
-                    <a class="btn"><i class="fa fa-retweet icon"></i></a>
+                    <a class="btn share-button" data-container="body" data-toggle="popover" data-placement="top"><i class="fa fa-share icon"></i></a>
                     <a class="btn"><i class="fa fa-download icon"></i></a>
-                    
+                    <a class="btn"><i class="fa fa-flag icon"></i></a>
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
                   </div>
                 </div>
 
@@ -49,7 +50,7 @@
 
       </div>
 
-
+      <div class='addthis_sharing_toolbox hidden' id="share-tools"></div>
 
 
         <script type="text/javascript">
@@ -61,16 +62,23 @@
                 aspectratio: "16:9"
             });
         </script>
+
+        <script>
+          $(document).ready(function(){
+            $('.share-button').popover({ 
+              html : true,
+              content: function() {
+                return $('#share-tools').html();
+              }
+            });
+          });
+        </script>
     </div>
 </div>
 
 
-
-
-
-
-
-
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-550c4ed51f276e5a" async="async"></script>
 
 
 

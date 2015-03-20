@@ -152,7 +152,7 @@ body
 {
   background-repeat: no-repeat;
   background-size: 100%;
-  opacity:0.14;
+  opacity:0.2;
   position:absolute;
   left:0;
   top:0;
@@ -184,15 +184,17 @@ body
 
 .widget
 {
-  width: 25%;
-  width: -webkit-calc(100% / 4);
-  width: calc(100% / 4);
-  height:250px;
+  width: 24.77%;
+  width: -webkit-calc(99.77% / 4);
+  width: calc(99.77% / 4);
+  height:220px;
   display:block;
   float:left;
   position: relative;
   background:#000;
   overflow: hidden;
+  margin-right:1px;
+  margin-bottom:1px;
 }
 
 .widget:nth-child(4n)
@@ -215,13 +217,36 @@ body
 
 .widget:hover .image
 {
-  opacity:0.25;
+
 }
 
 .widget:hover .caption
 {
   opacity:1;
   bottom:0;
+}
+
+
+
+.widget .img-shadow
+{
+  background-image: -webkit-linear-gradient(-90deg,rgba(0,0,0,.3) 0,#000 100%);
+  background-image: -moz-linear-gradient(-90deg,rgba(0,0,0,.3) 0,#000 100%);
+  background-image: linear-gradient(180deg,rgba(0,0,0,.3) 0,#000 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+
+.widget:hover .img-shadow
+{
+  opacity:0.8;
 }
 
 .widget .caption
@@ -268,7 +293,7 @@ body
   font-size:1.1em;
   color:#fff;
   line-height: 1.2em;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .widget .caption p
@@ -312,7 +337,7 @@ body
 .post-info h5
 {
   margin-top:0px;
-  margin-bottom:20px;
+  margin-bottom:15px;
   color:#707070;
 }
 
@@ -356,7 +381,14 @@ body
   margin-right:4px;
 }
 
-.post-box .btn:nth-child(3)
+.post-box .btn:nth-child(4)
 {
    margin-right:0px;
+}
+
+.hidden
+{
+  position:absolute;
+  top:-9999px;
+  left:-9999px;
 }
