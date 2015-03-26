@@ -52,9 +52,8 @@ ActiveRecord::Schema.define(version: 20150319183107) do
     t.integer  "user_id"
     t.string   "slug"
     t.string   "video"
-    t.boolean  "featured",       default: false
+    t.boolean  "featured",      default: false
     t.string   "category"
-    t.json     "featuredimages"
     t.string   "featuredone"
     t.string   "featuredtwo"
     t.string   "categorytwo"
