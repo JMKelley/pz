@@ -10,7 +10,7 @@
 
         <% post.categories.each do |category| %>
           <% category.posts.each do |post| %>
-            <%= link_to category.name, category_path(category) %>
+            <%= link_to category.name, category_path(category.id) %>
           <% end %>
         <% end %>
 
@@ -20,7 +20,3 @@
     </div>
   <% end %>
 </div>
-
-
-
- 
