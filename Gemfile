@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'pg'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -18,7 +19,7 @@ gem 'carrierwave'
 
 gem "mediaelement_rails"
 
-gem 'pg'
+gem 'will_paginate', '~> 3.0.6'
 
 gem 'fancybox2-rails', '~> 0.2.8'
 
