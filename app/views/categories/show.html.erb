@@ -8,16 +8,19 @@
       <div class="caption">
         <h4><%= post.title %></h4>
 
-        <% post.categories.each do |category| %>
-          <% category.posts.each do |post| %>
-            <%= link_to category.name, category_path(category.id) %>
-          <% end %>
+      <% post.categories.each do |category| %>
+        <%= link_to category_path(category) do %>
+          <div class="tag <%= category.name %>"><%= category.name %></div>
         <% end %>
-
+      <% end %>
 
       </div>
     <% end %>
     </div>
   <% end %>
-  <%= will_paginate @posts %>
+  <div class="pagination">
+    <div class="digg_pagination">
+      <%= will_paginate @posts, :container => false, :inner_window => 2, :previous_label => 'Prev', :next_label => 'Next →' %>
+    </div>
+  </div>
 </div>
