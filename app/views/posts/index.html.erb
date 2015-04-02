@@ -29,7 +29,7 @@
 
       <div class="caption">
         <h4><%= post.title %></h4>
-        <p>by <%= post.affiliate %></p>
+        <p>by <%= post.affiliate %> &middot; <%= post.impressionist_count(:filter=>:all) %> views</p>
       </div>
 
       <!-- LINK TO TAG ENDS HERE FOR SOME REASON --> 

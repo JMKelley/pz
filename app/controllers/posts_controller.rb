@@ -1,9 +1,8 @@
 class PostsController < ApplicationController
-
   before_filter :authorize_admin, only: :new
   
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  impressionist :actions=>[:show,:index]
+  
 
   # GET /posts
   # GET /posts.json
@@ -14,7 +13,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-
+    impressionist(@post)
   end
 
   # GET /posts/new
