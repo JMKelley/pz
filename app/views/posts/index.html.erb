@@ -1,4 +1,23 @@
-<div class="container-fluid no-padding">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 sorting">
+      <ul>
+        <li>
+          <a href="#">Popular</a>
+        </li>
+        <li>
+          <a href="#">Longest</a>
+        </li>
+        <li>
+          <a href="#">Fresh</a>
+        </li>
+
+        <li class="text-right">
+          <a href="#">@pornzo</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <% @posts.each do |post| %>
     <div class="widget" >
     <%= link_to post do %>
