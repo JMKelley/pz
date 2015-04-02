@@ -3,12 +3,23 @@
     <div class="col-md-12 sorting">
       <ul>
         <li>
-          <a href="/" class="active">Popular</a>
+          <%= link_to posts_path(order: :hot) do %>
+            Hottest
+          <% end %>
         </li>
         <li>
-          <a href="#">Longest</a>
+          <%= link_to posts_path(order: :recent) do %>
+            Recent
+          <% end %>
+
         </li>
+
         <li>
+          <%= link_to posts_path(order: :longest) do %>
+            Longest
+          <% end %>
+        </li>
+        
           <a href="#">Fresh</a>
         </li>
 

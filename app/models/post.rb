@@ -15,4 +15,22 @@ class Post < ActiveRecord::Base
 
 	scope :featured, -> { where(:featured => true) }
 
+	scope :recent, -> { order(created_at: :desc) }
+	scope :hot,    -> { order(impressionist_count: :desc) }
+	scope :longest, -> { order(duration: :desc) }
+
+
+	def self.sort_by(sort_param)
+	  case sort_param
+	  when 'recent'
+	    recent
+	  when 'hot'
+	    hot
+	  when 'longest'
+	    longest
+	  else
+	    all
+	  end
+	end
+
 end
