@@ -3,8 +3,8 @@
     <div class="col-md-12 sorting">
       <ul>
         <li>
-          <%= link_to posts_path(order: :hot) do %>
-            Hottest
+          <%= link_to posts_path(order: :hot), class: "active" do %>
+            Popular
           <% end %>
         </li>
         <li>
@@ -19,9 +19,7 @@
             Longest
           <% end %>
         </li>
-        
-          <a href="#">Fresh</a>
-        </li>
+
 
         <li class="text-right">
           <a href="http://www.twitter.com/pornzo" target="_blank">@pornzo</a>
@@ -37,6 +35,7 @@
       <div class="image b-lazy" data-src="<%= post.image %>">
       </div>
 
+      <span class="label duration"><i class="fa fa-play"></i><%= post.duration %></span>
 
       <div class="caption">
         <h4><%= post.title %></h4>
@@ -65,10 +64,5 @@
 
 </div>
 
-<script>
-  $(".sorting ul li a").on("click", function(){
-     $(".sorting").find(".active").removeClass("active");
-     $(this).addClass("active");
-  });
+<script type="text/javascript" charset="utf-8">
 </script>
- 

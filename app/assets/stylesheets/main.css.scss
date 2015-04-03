@@ -291,7 +291,7 @@ a:hover
   margin-bottom:4px;
 }
 
-.widget:nth-child(3n)
+.widget:nth-child(3n + 1)
 {
   margin-right:0px;
 }
@@ -341,6 +341,23 @@ a:hover
 .widget:hover .img-shadow
 {
   opacity:0.6;
+}
+
+.widget .duration
+{
+  position:absolute;
+  top:20px;
+  right:20px;
+  opacity:1;
+  background:rgba(0,0,0,.6);
+  border-radius: 3px;
+  padding: .4em .6em .4em;
+  font-size: 77%;
+}
+
+.widget .duration .fa
+{
+  margin-right:5px;
 }
 
 .widget .caption

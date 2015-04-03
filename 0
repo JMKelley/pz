@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20150403090350_adding_counter_cache_to_posts.rb
