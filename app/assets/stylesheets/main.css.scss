@@ -1,5 +1,15 @@
  @import "bootstrap";
 
+
+ @media (min-width: 1200px) {
+
+  .container {
+    width: 1024px;
+  }
+
+}
+
+
 html {
 	-webkit-font-smoothing: antialiased;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -273,9 +283,9 @@ a:hover
 
 .widget
 {
-  width: 33.30%;
-  width: -webkit-calc(99.30% / 3);
-  width: calc(99.30% / 3);
+  width: 33.10%;
+  width: -webkit-calc(99.10% / 3);
+  width: calc(99.10% / 3);
   height:200px;
   display:block;
   float:left;
@@ -306,7 +316,7 @@ a:hover
 
 .widget:hover .image
 {
-  opacity:0.4;
+  opacity:0.3;
 }
 
 .widget:hover .caption
@@ -459,6 +469,7 @@ a:hover
   z-index:998;
   color:#fff;
   margin-top:-5px;
+  margin-bottom:50px;
 }
 
 .post-info h1
@@ -568,7 +579,7 @@ a:hover
 .digg_pagination > *
 {
   padding:20px 25px;
-  background:#222326;
+  background:#262830;
   border-radius: 3px;
   font-size:16px;
   font-weight:bold;
@@ -577,13 +588,13 @@ a:hover
 
 .digg_pagination .current
 {
-  background:#FFA223;
+  background:#1d62f0;
   font-style: normal;
 }
 
 .digg_pagination a:hover
 {
-  background:#292A2D;
+  background:#2E313D;
   color:#fff;
 }
 
@@ -595,11 +606,12 @@ a:hover
 
 .digg_pagination .next_page
 {
-  background:#FFA223;
+  background:#1d62f0;
   color:#fff !important;
 }
 
 .digg_pagination .next_page:hover
 {
-  background:#E58604;
+  background:#0892FF;
 }
+

@@ -3,19 +3,19 @@
     <div class="col-md-12 sorting">
       <ul>
         <li>
-          <%= link_to posts_path(order: :hot), class: "active" do %>
+          <%= link_to posts_path(order: :hot), class: "#{'active' if params[:order] == 'hot'}" do %>
             Popular
           <% end %>
         </li>
         <li>
-          <%= link_to posts_path(order: :recent) do %>
+          <%= link_to posts_path(order: :recent), class: "#{'active' if params[:order] == 'recent'}" do %>
             Recent
           <% end %>
 
         </li>
 
         <li>
-          <%= link_to posts_path(order: :longest) do %>
+          <%= link_to posts_path(order: :longest), class: "#{'active' if params[:order] == 'longest'}" do %>
             Longest
           <% end %>
         </li>

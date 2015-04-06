@@ -7,13 +7,14 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-      @posts = Post.all.sort_by(params[:order]).paginate(page: params[:page], per_page: 20)
+      @posts = Post.all.sort_by(params[:order]).paginate(page: params[:page], per_page: 40)
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
     impressionist(@post)
+    @recent_posts = Post.where.not(id: @post.id).order('created_at desc').limit(6)
   end
 
   # GET /posts/new
