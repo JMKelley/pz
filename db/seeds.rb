@@ -9,3 +9,7 @@
 Category.create! name: "Action"
 Category.create! name: "Romance"
 Category.create! name: "Comedy"
+
+
+admin = User.create! :email => 'admin123333412542@admin.com', :password => 'topsecret', :password_confirmation => 'topsecret'
+admin.update_attribute :admin, true
