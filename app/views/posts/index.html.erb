@@ -1,49 +1,20 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 sorting">
-      <ul>
-        <li>
-          <%= link_to posts_path(order: :hot), class: "#{'active' if params[:order] == 'hot'}" do %>
-            Popular
-          <% end %>
-        </li>
-        <li>
-          <%= link_to posts_path(order: :recent), class: "#{'active' if params[:order] == 'recent'}" do %>
-            Recent
-          <% end %>
-
-        </li>
-
-        <li>
-          <%= link_to posts_path(order: :longest), class: "#{'active' if params[:order] == 'longest'}" do %>
-            Longest
-          <% end %>
-        </li>
-
-
-        <li class="text-right">
-          <a href="http://www.twitter.com/pornzo" target="_blank">@pornzo</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+<div class="container no-padding" id="container">
   <% @posts.each do |post| %>
-    <div class="widget" >
+
+    <% if post.featured? %>
+    <div class="widget w2" >
 
     <%= link_to post do %>
       
       <div class="image b-lazy" data-src="<%= post.image %>">
       </div>
 
+      <div class="img-shadow"></div>
+
       <span class="label duration"><%= post.duration %></span>
 
       <div class="caption">
         <h4><%= post.title %></h4>
-        <p>by <%= post.affiliate %> &middot; <%= post.impressionist_count(:filter=>:all) %> views</p>
-      </div>
-
-      <!-- LINK TO TAG ENDS HERE FOR SOME REASON --> 
-      <div class="caption-top">
         <% post.categories.each do |category| %>
           <%= link_to category_path(category) do %>
             <div class="tag <%= category.name %>">#<%= category.name %></div>
@@ -51,8 +22,38 @@
         <% end %>
       </div>
 
+      <!-- LINK TO TAG ENDS HERE FOR SOME REASON --> 
+
     <% end %>
     </div>
+
+    <% else %>
+
+    <div class="widget" >
+
+    <%= link_to post do %>
+      
+      <div class="image b-lazy" data-src="<%= post.image %>">
+      </div>
+
+      <div class="img-shadow"></div>
+
+      <span class="label duration"><%= post.duration %></span>
+
+      <div class="caption">
+        <h4><%= post.title %></h4>
+        <% post.categories.each do |category| %>
+          <%= link_to category_path(category) do %>
+            <div class="tag <%= category.name %>">#<%= category.name %></div>
+          <% end %>
+        <% end %>
+      </div>
+
+      <!-- LINK TO TAG ENDS HERE FOR SOME REASON --> 
+
+    <% end %>
+    </div>
+    <% end %>
   <% end %>
 
   <div class="pagination">
@@ -64,5 +65,10 @@
 
 </div>
 
-<script type="text/javascript" charset="utf-8">
+<script>
+  var $container = $('#container');
+  // init
+  $container.packery({
+    itemSelector: '.widget'
+  });
 </script>
