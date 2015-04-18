@@ -1,33 +1,6 @@
 <div class="container no-padding" id="container">
   <% @posts.each do |post| %>
 
-    <% if post.featured? %>
-    <div class="widget w2" >
-
-    <%= link_to post do %>
-      
-      <div class="image b-lazy" data-src="<%= post.image %>">
-      </div>
-
-      <div class="img-shadow"></div>
-
-      <span class="label duration"><%= post.duration %></span>
-
-      <div class="caption">
-        <h4><%= post.title %></h4>
-        <% post.categories.each do |category| %>
-          <%= link_to category_path(category) do %>
-            <div class="tag <%= category.name %>">#<%= category.name %></div>
-          <% end %>
-        <% end %>
-      </div>
-
-      <!-- LINK TO TAG ENDS HERE FOR SOME REASON --> 
-
-    <% end %>
-    </div>
-
-    <% else %>
 
     <div class="widget" >
 
@@ -36,24 +9,13 @@
       <div class="image b-lazy" data-src="<%= post.image %>">
       </div>
 
-      <div class="img-shadow"></div>
-
-      <span class="label duration"><%= post.duration %></span>
-
       <div class="caption">
         <h4><%= post.title %></h4>
-        <% post.categories.each do |category| %>
-          <%= link_to category_path(category) do %>
-            <div class="tag <%= category.name %>">#<%= category.name %></div>
-          <% end %>
-        <% end %>
-      </div>
-
-      <!-- LINK TO TAG ENDS HERE FOR SOME REASON --> 
+        <p><%= post.view_count %> views &middot; <a href="<%= post.url %>"><%= post.affiliate %></a> <p>
+      </div> 
 
     <% end %>
     </div>
-    <% end %>
   <% end %>
 
   <div class="pagination">
@@ -64,11 +26,3 @@
 
 
 </div>
-
-<script>
-  var $container = $('#container');
-  // init
-  $container.packery({
-    itemSelector: '.widget'
-  });
-</script>

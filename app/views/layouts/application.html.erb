@@ -11,8 +11,7 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
   <script src="//cdn.jsdelivr.net/blazy/1.3.1/blazy.min.js"></script>
-  <script src="//use.typekit.net/utw1mof.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
+  <link href="https://fontastic.s3.amazonaws.com/X9uxQeFcKw4C2ETyztppGG/icons.css" rel="stylesheet">
 
   
   
@@ -20,7 +19,7 @@
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top">
- <div class="container-fluid">
+ <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -31,14 +30,16 @@
       </button>
     </div>
     <div class="navbar-brand">
-      <a href="/">
-        <%= image_tag "logo.png" %>
-      </a>
+      <div class="brand-wrapper">
+        <a href="/">
+          <div class="logo"></div>
+        </a>
+      </div>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#"><i class="fa fa-bars icon"></i>Feed <span class="caret"></span></a></li>
+        <li><a href="#"><i class="icon-hashtag"></i>Discover <span class="caret"></span></a></li>
         <li><a href="#"><i class="fa fa-video-camera icon"></i>Cams</a></li>
         <li><a href="#"><i class="fa fa-female icon"></i>#GOTM  <span class="label label-success">APPLY</span></a></li>
       </ul>

@@ -8,22 +8,9 @@ html {
 
 }
 
-@media (min-width: 1200px){
-  .container {
-  width: 1200px;
-  }
-}
-
-
-.container-fluid
-{
-  padding-left:40px;
-  padding-right: 40px;
-}
-
 body
 {
-    background: #070707;
+    background: #121314;
   	padding-top:54px;
 }
 
@@ -47,7 +34,7 @@ a:hover
 
 .navbar-default
 {
-	background-color: rgba(7,7,7,0.9);
+	background-color: #1C1C1F;
 	border-left:none;
   border-right:none;
   border-top:none;
@@ -150,6 +137,27 @@ a:hover
   margin: auto;
 }
 
+.brand-wrapper
+{
+  width:100px;
+  height:25px;
+  margin:auto;
+}
+
+.logo
+{
+  width:98px;
+  height:24px;
+  background-image:url('/assets/logo.png');
+  background-size: cover;
+  margin:auto;
+}
+
+.logo:hover
+{
+  background-image:url('/assets/Logo-hover.png');
+}
+
 .nav .small-padding
 {
   padding: 17px;
@@ -188,238 +196,17 @@ a:hover
 
 /* FEATURED IMAGE STYLES */
 
-.video-wrapper
-{
-  position: relative;
-}
-
-.video-image-container
-{
-  background-repeat: no-repeat;
-  background-size: 100%;
-  opacity:0;
-  position:absolute;
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  z-index: 1;
-}
-
-.featured-content
-{
-  z-index:2;
-  color:#fff;
-}
-
-.featured-content .tag
-{
-  background-color:#FF3181;
-  font-size: 12px;
-}
 
 /* END */
 
 /* SORTING */
 
-.sorting ul
-{
-  list-style: none;
-  margin:0px;
-  padding:0px;
-}
-
-.sorting ul li
-{
-  float:left;
-}
-
-.sorting ul li:first-child a
-{
-  padding-left:0px;
-}
-
-.sorting ul li:last-child a
-{
-  padding-right: 0px;
-}
-
-.sorting ul li:last-child
-{
-  float:right;
-}
-
-.sorting ul li a
-{
-  font-size: 19px;
-  color: #FFFFFF;
-  line-height: 23px;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: normal;
-  margin:0px;
-  opacity:0.6;
-  padding:25px 20px;
-  display: block;
-  text-decoration: none !important;
-}
-
-.active
-{
-  font-weight: 500 !important;
-  opacity:1 !important;
-  text-decoration: none !important;
-}
-
-.sorting ul li a:hover
-{
-  opacity:1;
-  background:transparent;
-}
+/* END */
 
 /* WIDGET STYLES */
 
-.no-padding
-{
-  padding:0px;
-}
+/* END */
 
-.no-margin
-{
-  margin:0px;
-}
-
-.widget.w2 { width: 50%; height:400px; }
-
-.widget
-{
-  width: 25%;
-  height:200px;
-  display:block;
-  float:left;
-  position: relative;
-  background:#000;
-  overflow: hidden;
-}
-
-.widget .image
-{
-  width:100%;
-  height:100%;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.widget:hover .image
-{
-  opacity:0.8;
-}
-
-.widget:hover .caption
-{
-  opacity:1;
-  bottom:0;
-}
-
-
-
-.widget .img-shadow
-{
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.75)));
-  background-image: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.75));
-  background-image: -moz-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.75));
-  background-image: -o-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.75));
-  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.75));
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  -webkit-transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  transition: opacity .2s ease-in-out;
-}
-
-.widget:hover .img-shadow
-{
-  opacity:1;
-}
-
-.widget .duration
-{
-  position:absolute;
-  top:20px;
-  right:20px;
-  opacity:1;
-  background:rgba(0,0,0,.6);
-  border-radius: 3px;
-  padding: .4em .6em .4em;
-  font-size: 77%;
-}
-
-.widget .caption
-{
-  position:absolute;
-  
-  width:100%;
-  padding:20px;
-  bottom:0px;
-  left:0;
-  opacity:0;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.widget .caption-top
-{
-  position:absolute;
-  
-  padding-top:20px;
-  padding-left:20px;
-  top:0px;
-  left:0;
-  opacity:0;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.widget:hover .caption-top
-{
-  opacity:1;
-}
-
-/* TAG COLOURS */
-
-
-
-.widget .caption h4
-{
-  font-weight: 700;
-  font-size:15px;
-  color:#fff;
-  line-height: 1.2em;
-  margin-bottom: 6px;
-}
-
-.widget .caption p
-{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  color: #fff;
-  opacity: 0.7;
-  font-family: helvetica neue;
-  font-weight: 500;
-  font-size: 13px;
-}
 
 
 
