@@ -1,4 +1,5 @@
-<div class="container no-padding" id="container">
+<div class="container" id="container">
+
   <% @posts.each do |post| %>
 
 
@@ -6,12 +7,13 @@
 
     <%= link_to post do %>
       
-      <div class="image b-lazy" data-src="<%= post.image %>">
+      <div class="image" style="background-image:url('<%= post.image %>')">
       </div>
 
       <div class="caption">
         <h4><%= post.title %></h4>
-        <p><%= post.view_count %> views &middot; <a href="<%= post.url %>"><%= post.affiliate %></a> <p>
+        <p><%= post.impressionist_count(:filter=>:all) %> views &middot; <a href="<%= post.url %>"><%= post.affiliate %></a> <p>
+        <p><%= post.description %></p>
       </div> 
 
     <% end %>

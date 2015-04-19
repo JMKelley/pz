@@ -8,11 +8,6 @@ class Post < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :title, use: :slugged
 
-	mount_uploader :video, VideoUploader
-	mount_uploader :image, ImageUploader
-	mount_uploader :featuredone, FeaturedoneUploader
-	mount_uploader :featuredtwo, FeaturedtwoUploader
-
 	scope :featured, -> { where(:featured => true) }
 
 	scope :recent, -> { order(created_at: :desc) }

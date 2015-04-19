@@ -47,15 +47,6 @@ a:hover
 
 }
 
-.navbar .icon
-{
-	font-size: 14px;
-  margin-right: 7px;
-  -webkit-transition: all .1s ease-in;
-  -moz-transition: all .1s ease-in;
-  -o-transition: all .1s ease-in;
-  transition: all .1s ease-in;
-}
 
 .navbar .caret
 {
@@ -79,22 +70,19 @@ a:hover
   letter-spacing: -0.2px;
 }
 
+
 .navbar-default .navbar-nav > li > a
 {
 	color:#fff;
 	opacity:0.75;
 }
 
-.navbar-default .navbar-nav > li:first-child > a
-{
-  padding-left:0px;
-}
 
 .navbar-default .navbar-nav > li > a:hover
 {
 	opacity:1;
 	color:#fff;
-	background-color:transparent;
+	background-color:rgba(255,255,255,0.03);
 }
 
 .navbar-default .navbar-nav > li > a:hover .fa-heart
@@ -135,6 +123,33 @@ a:hover
   top: 0;
   text-align: center;
   margin: auto;
+}
+
+
+.navbar .icon
+{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right:4px;
+}
+
+.navbar .icon-hashtag
+{
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.navbar .icon-record
+{
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.navbar .icon-hd
+{
+  font-size: 18px;
+  line-height: 10px;
+  margin-right: 8px;
 }
 
 .brand-wrapper
@@ -204,6 +219,28 @@ a:hover
 /* END */
 
 /* WIDGET STYLES */
+
+.widget {
+    background:#eee;
+    height:670px;
+    display:block;
+    width:300px;
+    float:left;
+}
+
+
+ .widget .image {
+    width:100%;
+    background:#000;
+    display:block;
+    overflow:hidden;
+    height:300px;
+
+     background-size: cover;
+     background-position: 50% 50%;
+     background-repeat: no-repeat;
+}
+
 
 /* END */
 
