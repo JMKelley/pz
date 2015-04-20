@@ -12,6 +12,12 @@ body
 {
     background: #121314;
   	padding-top:54px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+p
+{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 a:hover
@@ -139,10 +145,20 @@ a:hover
   line-height: 15px;
 }
 
+.navbar .discover:hover .icon-hashtag
+{
+  color:#FF376E;
+}
+
 .navbar .icon-record
 {
-  font-size: 18px;
-  line-height: 16px;
+  font-size: 17px;
+  line-height: 13px;
+}
+
+.navbar .cams:hover .icon-record
+{
+  color:#2EFFA9;
 }
 
 .navbar .icon-hd
@@ -151,6 +167,12 @@ a:hover
   line-height: 10px;
   margin-right: 8px;
 }
+
+.navbar .hd:hover .icon-hd
+{
+  color:#FF9D00;
+}
+
 
 .brand-wrapper
 {
@@ -221,11 +243,13 @@ a:hover
 /* WIDGET STYLES */
 
 .widget {
-    background:#eee;
-    height:670px;
+    background:#222326;
+    height:550px;
     display:block;
     width:300px;
     float:left;
+    margin-right:30px;
+    margin-bottom:30px;
 }
 
 
@@ -241,6 +265,36 @@ a:hover
      background-repeat: no-repeat;
 }
 
+.widget .caption
+{
+  padding:20px 20px;
+}
+
+.widget .caption h4
+{
+  font-weight:bold;
+  font-size: 15px;
+  color: #FFFFFF;
+  line-height: 24px;
+  margin:0px 0px 10px 0px;
+}
+
+
+.widget .caption .meta a
+{
+  opacity: 0.6;
+  font-size: 13px;
+  color: #87888B;
+  line-height: 24px;
+}
+
+
+.widget .caption .desc
+{
+  font-size: 14px;
+  color: #87888B;
+  line-height: 26px;
+}
 
 /* END */
 
