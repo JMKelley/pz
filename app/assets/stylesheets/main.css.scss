@@ -15,7 +15,7 @@ html {
 body
 {
     background: #121314;
-  	padding-top:54px;
+  	padding-top:80px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -192,12 +192,18 @@ a:hover
   background-image:url('/assets/logo.png');
   background-size: cover;
   margin:auto;
+  -webkit-transition: all .1s ease-in;
+  -moz-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+  opacity: 0.6;
 }
 
 .logo:hover
 {
-  background-image:url('/assets/Logo-hover.png');
+  opacity: 1;
 }
+
 
 .nav .small-padding
 {
@@ -235,8 +241,36 @@ a:hover
 
 
 
-/* FEATURED IMAGE STYLES */
+/* JUMBOTRON STYLES */
 
+.container .jumbotron
+{
+  background: #202224;
+  border-radius: 5px;
+  padding:22px;
+}
+
+.jumbotron h1
+{
+  float: left;
+  font-weight: bold;
+  font-size: 15px;
+  color: #FFFFFF;
+  line-height: 14px;
+  margin: 0px;
+  margin-right:10px;
+}
+
+.jumbotron p
+{
+  float: left;
+  opacity: 0.5;
+  font-size: 13px;
+  color: #FFFFFF;
+  line-height: 17px;
+  margin: 0px;
+  font-weight: 500;
+}
 
 /* END */
 
@@ -254,6 +288,15 @@ a:hover
     float:left;
     margin-right:30px;
     margin-bottom:30px;
+  -webkit-transition: all .1s ease-in;
+  -moz-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+}
+
+.widget:hover
+{
+  background:#292A2E;
 }
 
 .widget:nth-child(3n) {
