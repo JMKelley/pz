@@ -1,3 +1,12 @@
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Hello, world!</h1>
+    <p>...</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+  </div>
+</div>
+
 <div class="container" id="container">
 
   <% @posts.each do |post| %>
@@ -12,7 +21,7 @@
 
       <div class="caption">
         <h4><%= post.title %></h4>
-        <p class="meta"><%= post.impressionist_count(:filter=>:all) %> views &middot; <a href="<%= post.url %>"><%= post.affiliate %></a> <p>
+        <p class="meta"><%= post.impressionist_count(:filter=>:all) %> views &middot; <a href="<%= post.url %>"><%= post.affiliate %></a> </p>
         <p class="desc"><%= post.description %></p>
       </div> 
 
@@ -28,3 +37,22 @@
 
 
 </div>
+
+<script>
+$(document).ready(function () {
+
+      $(".caption").each(function () {
+
+          var authorheight = $(this).children('.meta').innerHeight();
+          var h2height = $(this).find('h4').innerHeight();
+
+          console.log(authorheight);
+          console.log(h2height);
+          
+          $(this).children(".desc").height(200 - h2height - authorheight - 60);
+
+          $(this).children(".desc").dotdotdot();
+      });
+
+  });
+</script>

@@ -18,6 +18,8 @@
 </head>
 <body>
 
+
+
 <nav class="navbar navbar-default navbar-fixed-top">
  <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,12 +32,20 @@
       </button>
     </div>
 
+    <div class="navbar-brand">
+       <div class="brand-wrapper">
+         <a href="/">
+            <div class="logo"></div>
+         </a>
+       </div>
+     </div>
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="#" class="discover"><i class="icon-hashtag icon"></i>Discover <span class="caret"></span></a></li>
-        <li><a href="#" class="cams"><i class="icon-record icon"></i>Trailers</a></li>
-        <li><a href="#" class="hd"><i class="icon-hd icon"></i>HD Trailers  <span class="label label-success">PRO</span></a></li>
+        <li><a href="#" class="cams"><i class="icon-record icon"></i>Cams</a></li>
+        <li><a href="#" class="hd"><i class="icon-hd icon"></i>Members  <span class="label label-success">PRO</span></a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
@@ -67,24 +77,7 @@
 
 
 
-<script>
-  $(document).ready(function () {
 
-      $(".widget").each(function () {
-
-          var imgheight = 300;
-          var authorheight = $('.meta').outerHeight();
-          var h2height = $('.caption h4').outerHeight();
-
-          $(".desc").height(550 - imgheight - h2height - authorheight);
-
-          $(".desc").dotdotdot({
-              after: "a.readmore"
-          });
-      });
-
-  });
-</script>
 
 
 </body>
