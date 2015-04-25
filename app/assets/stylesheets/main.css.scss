@@ -231,6 +231,31 @@ a:hover
 }
 
 
+/* DROPDOWN STYLES */
+
+.nav li:hover ul
+{
+  display:block;
+}
+
+.nav li ul
+{
+  background:#212124;
+  position:fixed;
+  top:54px;
+  left:0;
+  width:100%;
+  display:none;
+  
+}
+
+
+.nav li ul a
+{
+  display:block;
+  padding:5px 5px;
+}
+/* END OF DROP DOWN STYLES */
 
 
 /* JUMBOTRON STYLES */
