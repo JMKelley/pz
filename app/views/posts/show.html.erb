@@ -1,89 +1,54 @@
-<div class="container-fluid video-wrapper">
-    <div class="container video-player-wrapper">
+
+    <div class="container">
 
       <div class="row">
-        <div class="col-md-8">
+        
+        <div class="col-md-8 video">
+            <div id="myElement">Loading the player...</div>
+        </div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <div id="myElement">Loading the player...</div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 post-info">
-              <div class="col-md-12 post-box">
-                <div class="row">
-                  <div class="col-md-7">
-                    <h1><%= @post.title %></h1>
-                    <h5>By <a href="<%= @post.url %>" class="affiliate"><%= @post.affiliate %> &bull; Join now for just $1!</a> </h5>
-
-                  </div>
-                  <div class="col-md-5 text-right">
-                    <a class="btn"><i class="fa fa-heart icon"></i></a>
-                    <a class="btn share-button" data-container="body" data-toggle="popover" data-placement="top"><i class="fa fa-share icon"></i></a>
-                    <a class="btn"><i class="fa fa-download icon"></i></a>
-                    <a class="btn"><i class="fa fa-flag icon"></i></a>
-                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                  </div>
-                </div>
-
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <% @post.categories.each do |category| %>
-                        <%= link_to category_path(category) do %>
-                          <div class="tag <%= category.name %>"><%= category.name %></div>
-                        <% end %>
-                    <% end %>
-                  </div>
-                </div>
-
-
+        <div class="col-md-4 no-padding">
+          <div class="container-fluid sidebar">
+            <div class="row">
+              <div class="col-md-12">
+                <h1><%= @post.title %></h1>
               </div>
             </div>
-          </div>
 
-        </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="meta"><%= @post.impressionist_count(:filter=>:all) %> views &middot; <a href="<%= @post.url %>"><%= @post.affiliate %></a></p>
+              </div>
+            </div>
 
-        <div class="col-md-4">
-        </div>
+            <div class="row">
+              <div class="col-md-12">
+                <p class="description"><%= @post.description %></p>
+              </div>
+            </div>
 
-      </div>
+            <div class="row">
+              <div class="col-md-12">
+                <a href="<%= @post.url %>" class="view-more">Watch full on <%= @post.affiliate %> &rarr;</a>
+              </div>
+            </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <div class="next-posts">
-              <% @recent_posts.each do |post| %>
-                  <div class="widget" >
-
-                  <%= link_to post do %>
-                    
-                    <div class="image b-lazy" data-src="<%= post.image %>">
-                    </div>
-
-                    <span class="label duration"><%= post.duration %></span>
-
-                    <div class="caption">
-                      <h4><%= post.title %></h4>
-                      <p>by <%= post.affiliate %> &middot; <%= post.impressionist_count(:filter=>:all) %> views</p>
-                    </div>
-
-                    <!-- LINK TO TAG ENDS HERE FOR SOME REASON --> 
-                    <div class="caption-top">
-                      <% post.categories.each do |category| %>
-                        <%= link_to category_path(category) do %>
-                          <div class="tag <%= category.name %>">#<%= category.name %></div>
-                        <% end %>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="tags">
+                  <% @post.categories.each do |category| %>
+                      <%= link_to category_path(category) do %>
+                        <div class="tag <%= category.name %>"><%= category.name %></div>
                       <% end %>
-                    </div>
-
                   <% end %>
-                  </div>
-              <% end %>
-          </div>
-        </div>
+                </div>
+              </div>
+            </div>
+  
+        </div>     
       </div>
+    </div>
+  </div>
 
 
 
@@ -95,24 +60,12 @@
                 image: "<%= @post.image %>",
                 stretching: "fill",
                 width: "100%",
+                height: "500",
                 aspectratio: "16:9"
             });
         </script>
 
-        <script>
-          $(document).ready(function(){
-            $('.share-button').popover({ 
-              html : true,
-              content: function() {
-                return $('#share-tools').html();
-              }
-            });
-          });
-        </script>
     </div>
-</div>
-
-<script data-cfasync="false" type="text/javascript" src="//filamentapp.s3.amazonaws.com/69c96db47ea491c727da4e76493fcbf1.js" async="async"></script>
 
 
 
