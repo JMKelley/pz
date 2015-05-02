@@ -10,7 +10,7 @@ html {
 
 body
 {
-    background: #121314;
+    background: #17181A;
   	padding-top:80px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -53,7 +53,7 @@ a:hover
 
 .navbar-default
 {
-	background-color: #1C1C1F;
+	background-color: #242428;
 	border-left:none;
   border-right:none;
   border-top:none;
@@ -135,13 +135,6 @@ a:hover
   font-size: 18px;
   line-height: 20px;
   height: 54px;
-
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  text-align: center;
-  margin: auto;
 }
 
 
@@ -187,25 +180,18 @@ a:hover
 }
 
 
-.brand-wrapper
-{
-  width:100px;
-  height:25px;
-  margin:auto;
-}
-
 .logo
 {
-  width:98px;
-  height:24px;
-  background-image:url('/assets/logo1.png');
+  width:165px;
+  height:28px;
+  background-image:url('/assets/logo.png');
   background-size: cover;
   margin:auto;
   -webkit-transition: all .1s ease-in;
   -moz-transition: all .1s ease-in;
   -o-transition: all .1s ease-in;
   transition: all .1s ease-in;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .logo:hover
@@ -253,23 +239,24 @@ a:hover
 .nav li ul a
 {
   display:block;
-  padding:5px 5px;
+  padding:8px 5px;
 }
 /* END OF DROP DOWN STYLES */
 
 
 /* JUMBOTRON STYLES */
 
-.container .jumbotron
+
+
+.jumbotron
 {
   background: #202224;
-  border-radius: 5px;
-  padding:22px;
+  padding:42px;
+  margin-top:-25px;
 }
 
 .jumbotron h1
 {
-  float: left;
   font-weight: bold;
   font-size: 15px;
   color: #FFFFFF;
@@ -280,7 +267,6 @@ a:hover
 
 .jumbotron p
 {
-  float: left;
   opacity: 0.5;
   font-size: 13px;
   color: #FFFFFF;
@@ -298,12 +284,12 @@ a:hover
 /* WIDGET STYLES */
 
 .widget {
-    background:#222326;
-    height:405px;
+    background:transparent;
+    height:270px;
     display:block;
-    width:270px;
+    width:264px;
     float:left;
-    margin-right:20px;
+    margin-right:28px;
     margin-bottom:20px;
   -webkit-transition: all .1s ease-in-out;
   -moz-transition: all .1s ease-in-out;
@@ -311,10 +297,6 @@ a:hover
   transition: all .1s ease-in-out;
 }
 
-.widget:hover
-{
-  background:#25262A;
-}
 
 .widget:nth-child(4n) {
   margin-right:0px;
@@ -326,7 +308,7 @@ a:hover
     background:#000;
     display:block;
     overflow:hidden;
-    height:270px;
+    height:188px;
 
      background-size: cover;
      background-position: 50% 50%;
@@ -335,43 +317,51 @@ a:hover
 
 .widget .caption
 {
-  padding:17px 17px;
+  padding:10px 0px;
 }
 
 .widget .caption h4
 {
+  width:100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   font-weight:bold;
   font-size: 14px;
   color: #FFFFFF;
-  line-height: 22px;
+  line-height: 16px;
   margin:0px;
-  margin-bottom:3px;
+  margin-bottom:4px;
 }
 
 .widget .caption .meta
 {
-  margin: 0px 0px 9px 0px;
+  margin: 0px 0px 7px 0px;
+  opacity: 0.39;
+  color: #FFFFFF;
+  font-size: 12px;
 }
 
 .widget .caption .meta a
 {
-  opacity: 0.6;
-  font-size: 13px;
-  color: #87888B;
+  opacity: 0.39;
+  font-size: 12px;
+  color: #FFF;
   line-height: 24px;
 }
+
 
 
 .widget .caption .tag
 {
   font-weight: bold;
-  font-size: 9px;
-  color: #737782;
+  font-size: 10px;
+  color: #888888;
   line-height: 9px;
-  opacity:0.8;
-  padding: 4px;
-  background: #383A3F;
-  border-radius: 2px;
+  margin-bottom:10px;
+  opacity:0.5;
+  padding: 4px 4px 0px 0px;
   float: left;
   text-transform: uppercase;
   margin-right: 9px;
@@ -388,11 +378,11 @@ a:hover
 }
 
 .widget:hover .Comedy{
-  background:#FF2951;
+  color:#FF2951;
 }
 
 .widget:hover .Romance{
-  background:#8531FF;
+  color:#8531FF;
 }
 
 

@@ -1,12 +1,9 @@
-
-<div class="container">
   <div class="jumbotron">
     <div class="container">
       <h1>Free HD Trailers. No Gimmicks. No Bullshit</h1>
       <p>Is the best trailer site you’ve never heard of. </p>
     </div>
   </div>
-</div>
 
 <div class="container" id="container">
 
@@ -21,15 +18,15 @@
       </div>
 
       <div class="caption">
-        <h4><%= post.title %></h4>
-        <p class="meta"><%= post.impressionist_count(:filter=>:all) %> views &middot; <a href="<%= post.url %>"><%= post.affiliate %></a> </p>
         <div class="tags">
           <% post.categories.each do |category| %>
               <%= link_to category_path(category) do %>
-                <div class="tag <%= category.name %>"><%= category.name %></div>
+                <div class="tag <%= category.name %>">#<%= category.name %></div>
               <% end %>
           <% end %>
         </div>
+        <h4><%= post.title %></h4>
+        <p class="meta"><%= post.impressionist_count(:filter=>:all) %> views &middot; <a href="<%= post.url %>"><%= post.affiliate %></a> </p>
       </div> 
 
     <% end %>
