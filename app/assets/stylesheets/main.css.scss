@@ -10,7 +10,7 @@ html {
 
 body
 {
-    background: #17181A;
+    background: #141517;
   	padding-top:80px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -339,19 +339,28 @@ a:hover
 {
   margin: 0px 0px 7px 0px;
   opacity: 0.39;
-  color: #FFFFFF;
+  color: #444444;
   font-size: 12px;
 }
 
 .widget .caption .meta a
 {
-  opacity: 0.39;
+  opacity: 1;
   font-size: 12px;
-  color: #FFF;
+  color: #444444;
   line-height: 24px;
 }
 
 
+.widget .caption .meta a:visited {
+  color: #FFF;
+}
+
+
+.widget .caption .tag a
+{
+  color: #888888;
+}
 
 .widget .caption .tag
 {
@@ -360,7 +369,7 @@ a:hover
   color: #888888;
   line-height: 9px;
   margin-bottom:10px;
-  opacity:0.5;
+  opacity:1;
   padding: 4px 4px 0px 0px;
   float: left;
   text-transform: uppercase;
@@ -393,23 +402,12 @@ a:hover
 
 /* INPOST PAGE STYLES */
 
-.video
-{
-  padding-right: 0px;
-}
-
-@media(max-width:992px){
-  .video{
-    padding-right:15px;
-  }
-}
 
 
 .sidebar
 {
   background:#222326;
-  height:500px;
-  padding:45px;
+  padding:25px;
 }
 
 
