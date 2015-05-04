@@ -41,22 +41,3 @@
 
 
 </div>
-
-<script>
-$(document).ready(function () {
-
-      $(".caption").each(function () {
-
-          var authorheight = $(this).children('.meta').innerHeight();
-          var h2height = $(this).find('h4').innerHeight();
-
-          console.log(authorheight);
-          console.log(h2height);
-          
-          $(this).children(".desc").height(200 - h2height - authorheight - 60);
-
-          $(this).children(".desc").dotdotdot();
-      });
-
-  });
-</script>
