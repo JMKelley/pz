@@ -1,26 +1,43 @@
-<div class="container-fluid no-padding">
+<div class="category-banner">
+  <div class="jumbotron <%= @category.name %>">
+      <div class="container">
+        <h1><%= @category.name %></h1>
+      </div>
+  </div>
+</div>
+
+<div class="container" id="container">
+
   <% @posts.each do |post| %>
+
     <div class="widget" >
+
     <%= link_to post do %>
-      <div class="image b-lazy" data-src="<%= post.image %>">
+      
+      <div class="image" style="background-image:url('<%= post.image %>')">
       </div>
-      <div class="img-shadow"></div>
+
       <div class="caption">
+        <div class="tags">
+          <% post.categories.each do |category| %>
+              <%= link_to category_path(category) do %>
+                <div class="tag <%= category.name %>">#<%= category.name %></div>
+              <% end %>
+          <% end %>
+        </div>
         <h4><%= post.title %></h4>
+        <p class="meta"><%= post.impressionist_count(:filter=>:all) %> views &middot; <a href="<%= post.url %>"><%= post.affiliate %></a> </p>
+      </div> 
 
-      <% post.categories.each do |category| %>
-        <%= link_to category_path(category) do %>
-          <div class="tag <%= category.name %>"><%= category.name %></div>
-        <% end %>
-      <% end %>
-
-      </div>
     <% end %>
     </div>
   <% end %>
+
   <div class="pagination">
     <div class="digg_pagination">
       <%= will_paginate @posts, :container => false, :inner_window => 2, :previous_label => 'Prev', :next_label => 'Next →' %>
     </div>
   </div>
+
+
 </div>

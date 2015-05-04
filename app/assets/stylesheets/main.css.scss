@@ -131,7 +131,7 @@ a:hover
 
 
 .navbar-brand {
-  padding: 16px 16px;
+  padding: 14px 16px;
   font-size: 18px;
   line-height: 20px;
   height: 54px;
@@ -224,9 +224,14 @@ a:hover
   display:block;
 }
 
+.nav li:hover ul .row
+{
+  padding:10px 0px;
+}
+
 .nav li ul
 {
-  background:#212124;
+  background:#29292D;
   position:fixed;
   top:54px;
   left:0;
@@ -235,11 +240,20 @@ a:hover
   
 }
 
-
 .nav li ul a
 {
   display:block;
   padding:8px 5px;
+  font-size:13px;
+  font-weight: 600;
+  color:#fff;
+  opacity:0.7;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.nav li ul a:hover
+{
+  opacity:1;
 }
 /* END OF DROP DOWN STYLES */
 
@@ -250,9 +264,10 @@ a:hover
 
 .jumbotron
 {
-  background: #202224;
+  background-image: url('');
   padding:42px;
   margin-top:-25px;
+  background-size: cover;
 }
 
 .jumbotron h1
@@ -278,6 +293,19 @@ a:hover
 /* END */
 
 /* SORTING */
+
+/* END */
+
+/* CATEGORY BANNER */
+.category-banner .Comedy
+{
+  background:#FF2951;
+}
+
+.category-banner h1
+{
+  font-size:26px;
+}
 
 /* END */
 
@@ -338,8 +366,8 @@ a:hover
 .widget .caption .meta
 {
   margin: 0px 0px 7px 0px;
-  opacity: 0.39;
-  color: #444444;
+  opacity: 1;
+  color: #4F4F4F;
   font-size: 12px;
 }
 
@@ -347,13 +375,13 @@ a:hover
 {
   opacity: 1;
   font-size: 12px;
-  color: #444444;
+  color: #4F4F4F;
   line-height: 24px;
 }
 
 
 .widget .caption .meta a:visited {
-  color: #FFF;
+  color: #4F4F4F;
 }
 
 
@@ -415,7 +443,7 @@ a:hover
 .sidebar h1
 {
   font-weight:bold;
-  font-size: 16px;
+  font-size: 20px;
   color: #FFFFFF;
   line-height: 24px;
   margin:0px 0px 10px 0px;
@@ -472,6 +500,10 @@ a:hover
   z-index: 999;
 }
 
+.info
+{
+  margin-top:-5px;
+}
 
 
 /* PAGINATION STYLING */
