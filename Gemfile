@@ -24,6 +24,8 @@ gem 'fancybox2-rails', '~> 0.2.8'
 
 gem 'devise'
 
+gem 'metamagic'
+
 gem 'acts_as_votable'
 
 gem 'impressionist'
