@@ -10,7 +10,7 @@ html {
 
 body
 {
-    background: #141517;
+    background: #1C1C24;
   	padding-top:80px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -53,7 +53,7 @@ a:hover
 
 .navbar-default
 {
-	background-color: #242428;
+	background-color: #282831;
 	border-left:none;
   border-right:none;
   border-top:none;
@@ -236,7 +236,7 @@ a:hover
 
 .nav li ul
 {
-  background:#29292D;
+  background:#2D2D36;
   position:fixed;
   top:54px;
   left:0;
@@ -248,17 +248,20 @@ a:hover
 .nav li ul a
 {
   display:block;
-  padding:8px 5px;
+  padding:6px 10px;
   font-size:13px;
   font-weight: 600;
   color:#fff;
   opacity:0.7;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  border-radius:3px;
 }
 
 .nav li ul a:hover
 {
   opacity:1;
+  background:#fff;
+  color:#2D2D36;
 }
 /* END OF DROP DOWN STYLES */
 
