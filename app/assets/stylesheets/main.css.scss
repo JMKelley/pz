@@ -10,7 +10,7 @@ html {
 
 body
 {
-    background: #1C1C24;
+    background: #1A1025;
   	padding-top:80px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -53,7 +53,7 @@ a:hover
 
 .navbar-default
 {
-	background-color: #282831;
+	background-color: #291F32;
 	border-left:none;
   border-right:none;
   border-top:none;
@@ -182,7 +182,7 @@ a:hover
 
 .logo
 {
-  width:165px;
+  width:146px;
   height:28px;
   background-image:image-url('logo.png');
   background-size: cover;
@@ -320,23 +320,36 @@ a:hover
 /* WIDGET STYLES */
 
 .widget {
+    position:relative;
     background:transparent;
     height:270px;
     display:block;
-    width:264px;
+    width:370px;
     float:left;
-    margin-right:28px;
-    margin-bottom:20px;
-  -webkit-transition: all .1s ease-in-out;
-  -moz-transition: all .1s ease-in-out;
-  -o-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+    margin-right:10px;
+    margin-bottom:10px;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    overflow: hidden;
 }
 
 
-.widget:nth-child(4n) {
+.widget:nth-child(3n) {
   margin-right:0px;
 } 
+
+
+.widget:hover .caption
+{
+  display: block;
+}
+
+.widget:hover .tags
+{
+  display: block;
+}
 
 
  .widget .image {
@@ -344,7 +357,7 @@ a:hover
     background:#000;
     display:block;
     overflow:hidden;
-    height:188px;
+    height:270px;
 
      background-size: cover;
      background-position: 50% 50%;
@@ -354,17 +367,20 @@ a:hover
 .widget .caption
 {
   padding:10px 0px;
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  display:none;
 }
 
 .widget .caption h4
 {
+  display: block;
   width:100%;
-  white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
-
-  font-weight:bold;
-  font-size: 14px;
+  font-family: "pragmatica-web",sans-serif;
+  font-weight:900;
+  font-size: 24px;
   color: #FFFFFF;
   line-height: 16px;
   margin:0px;
@@ -393,42 +409,67 @@ a:hover
 }
 
 
-.widget .caption .tag a
+.widget .tags
 {
-  color: #888888;
+  position: absolute;
+  bottom:-12px;
+  left:0px;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
-.widget .caption .tag
+.widget:hover .tags
+{
+  bottom:0px;
+}
+
+.widget .tag a
+{
+  color: #888888;
+  float:left;
+}
+
+.widget .tag
 {
   font-weight: bold;
   font-size: 10px;
-  color: #888888;
-  line-height: 9px;
-  margin-bottom:10px;
-  opacity:1;
-  padding: 4px 4px 0px 0px;
+  color: #FFF;
+  line-height: 4px;
+  opacity: 1;
+  padding: 6px 10px 6px 10px;
   float: left;
   text-transform: uppercase;
-  margin-right: 9px;
+  margin-right: 0px;
   -webkit-transition: all .1s ease-in-out;
   -moz-transition: all .1s ease-in-out;
   -o-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
 }
 
-.widget:hover .tag
-{
-  opacity:1;
-  color:#fff;
+
+.widget .Anal{
+  background:#18D1BF;
 }
 
-.widget:hover .Comedy{
-  color:#FF2951;
+.widget .Amateur{
+  background:#F49D1D;
 }
 
-.widget:hover .Romance{
-  color:#8531FF;
+.widget .Interracial{
+  background:#000;
 }
+
+.widget .Blonde{
+  background:#E5B53D;
+}
+
+.widget .Blowjob{
+  background:#7C5DE8;
+}
+
+
 
 
 /* END */

@@ -17,17 +17,13 @@
       <div class="image" style="background-image:url('<%= post.image %>')">
       </div>
 
-      <div class="caption">
-        <div class="tags">
-          <% post.categories.each do |category| %>
-              <%= link_to category_path(category) do %>
-                <div class="tag <%= category.name %>">#<%= category.name %></div>
-              <% end %>
+    <div class="tags">
+      <% post.categories.each do |category| %>
+          <%= link_to category_path(category) do %>
+            <div class="tag <%= category.name %>"><%= category.name %></div>
           <% end %>
-        </div>
-        <h4><%= post.title %></h4>
-        <p class="meta"><%= post.impressionist_count(:filter=>:all) %> views &middot; <a href="<%= post.url %>"><%= post.affiliate %></a> </p>
-      </div> 
+      <% end %>
+    </div>
 
     <% end %>
     </div>
